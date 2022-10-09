@@ -1,0 +1,342 @@
+{
+  "version": 6,
+  "entities": [
+    {
+      "entity": {
+        "type": "Project",
+        "id": "e1833c14-0063-4138-b2e3-11b7cf7a2567",
+        "name": "pharmacy"
+      },
+      "children": [
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "page",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "row",
+                    "value": "10"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "specify_utc0_millisecond_timestamp",
+                    "value": "1665162000000"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/pharmacy/v1/"
+            },
+            "id": "5fe38443-06f6-4ffc-a351-2a98f672abb9",
+            "name": "01@ListPharmacySpecifyTimestamp",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "page",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "row",
+                    "value": "10"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "name",
+                    "value": "co"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/pharmacy/v1/mix"
+            },
+            "id": "658e07c2-3970-4414-b1d8-772a2f53635a",
+            "name": "02@SearchForPharmaciesOrMasksName",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "page",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "row",
+                    "value": "10"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "sorted",
+                    "value": "price"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/pharmacy/v1/1c87c223-47a7-11ed-b6ae-0242c0a89003/product"
+            },
+            "id": "82533054-2491-4c6a-b2ff-dad34ffbffbb",
+            "name": "03@ListProductByPharmacyName",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "page",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "row",
+                    "value": "10"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "min",
+                    "value": "1"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "max",
+                    "value": "10"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/pharmacy/v1/product/price"
+            },
+            "id": "757130be-35bc-4724-bf0e-f281e34ab2db",
+            "name": "04@ListPharmaciesByProductPriceRange",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "top_number",
+                    "value": "10"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "utc0_millisecond_start_timestamp",
+                    "value": "1611116589000"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "utc0_millisecond_end_timestamp",
+                    "value": "1612004337000"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/transaction/v1/transaction/top"
+            },
+            "id": "0780407e-fd80-4dad-8cd2-d7eae81a28bf",
+            "name": "05@ListTopXUsersTransactionAmount",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.1",
+              "name": "GET"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": [
+                  {
+                    "enabled": true,
+                    "name": "utc0_millisecond_start_timestamp",
+                    "value": "1611116589000"
+                  },
+                  {
+                    "enabled": true,
+                    "name": "utc0_millisecond_end_timestamp",
+                    "value": "1612004337000"
+                  }
+                ]
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/transaction/v1/transaction/product"
+            },
+            "id": "03f104cc-d60f-40db-be62-e55a70bba885",
+            "name": "06@GetTransactionTotalByDataRange",
+            "headers": []
+          }
+        },
+        {
+          "entity": {
+            "type": "Request",
+            "method": {
+              "requestBody": true,
+              "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+              "name": "POST"
+            },
+            "body": {
+              "formBody": {
+                "overrideContentType": true,
+                "encoding": "application/x-www-form-urlencoded",
+                "items": []
+              },
+              "bodyType": "Text",
+              "textBody": "{\n  \"user_id\": \"f08ba861-47a7-11ed-98c8-0242c0a8b003\",\n  \"pharmacy_id\": \"f0715d03-47a7-11ed-98c8-0242c0a8b003\",\n  \"product_id\": \"f0721f41-47a7-11ed-98c8-0242c0a8b003\",\n  \"quantity\": 2\n}"
+            },
+            "uri": {
+              "query": {
+                "delimiter": "&",
+                "items": []
+              },
+              "scheme": {
+                "name": "http",
+                "version": "V11"
+              },
+              "host": "localhost:38080",
+              "path": "/transaction/v1/purchase"
+            },
+            "id": "39631a64-e974-4d73-96d3-51a4ad052714",
+            "name": "07@Purchase",
+            "headers": [
+              {
+                "enabled": true,
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

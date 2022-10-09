@@ -3,18 +3,26 @@
 
 ## Required
 ### API Document
-  Import [this](#api-document) json file to Postman
+##### API Spec document
+  * Ref [`./API.md`](API.md)
+##### API Tester: Import json file to Talend API Tester
+  * Ref [`./talend_api_tester/README.md`](./talend_api_tester/README.md)
 
-### Import Data Commands
-  `rake import_data:book_store[PATH_TO_FILE]`  
-  `rake import_data:user[PATH_TO_FILE]`
+### Import Data Commands & Run Server
+  Watch README.md `How to use it?`
 
 ## Bonus
 ### Test Coverage Report
-  check report [here](#test-coverage-report)
+##### Run Command and get Coverage Report
+```shell
+make test
+```
 
 ### Dockerized
-  check my dockerfile [here](#dockerized)
+##### Check dockerfile
+  * [`./cmd/importer/Dockerfile`](./cmd/importer/Dockerfile)
+  * [`./cmd/restful/Dockerfile`](./cmd/restful/Dockerfile)
+  * [`./docker-compose.yaml`](./docker-compose.yaml)
 
 ### Demo Site Url
-  demo site is ready on [heroku](#demo-site-url)
+  Need Cloud Spanner & Cloud Run GCP environment
