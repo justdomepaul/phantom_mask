@@ -52,7 +52,7 @@ spanner-generate: ## generate spanner schema file
 	./spanner-migrate.sh generate
 
 spanner-up: ## up spanner
-	docker-compose up spanner-emulator -d
+	docker-compose up -d spanner-emulator
 
 spanner-down: ## down spanner
 	docker-compose kill spanner-emulator
@@ -88,3 +88,19 @@ spanner-migration-goto: ## migrate spanner goto
 
 spanner-migration-force: ## migrate spanner force
 	./spanner-migrate.sh force
+
+postgresql-generate: ## generate spanner schema file
+	./postgresql-migrate.sh generate
+
+postgresql-up: ## up spanner
+	docker-compose up -d postgresql
+
+postgresql-down: ## down spanner
+	docker-compose kill postgresql
+	docker rm postgresql
+
+postgresql-migration-up: ## migrate spanner up
+	./postgresql-migrate.sh up
+
+postgresql-migration-down: ## migrate spanner down
+	./postgresql-migrate.sh down

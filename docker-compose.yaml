@@ -13,9 +13,9 @@ services:
     command: -timeout 60s /app/restful
     environment:
       END_POINT: "spanner-emulator:9010"
-      ALLOW_ALL_ORIGINS: true
-      CUSTOMIZED_RENDER: true
-      JWT_GUARD: false
+      ALLOW_ALL_ORIGINS: 'true'
+      CUSTOMIZED_RENDER: 'true'
+      JWT_GUARD: 'false'
       HMAC_SECRET_KEY_PATH: ''
       HMAC_SECRET_KEY: 1011001100010011000111011101110000100011111011001110110100001110001111001111110111111001111100010111101011000010110001010010100010111100001001000110000110111011000111110011001100101001111011011111001101111110010011010111100110111000110101111100110100111110100011111010100110010000101111000111000
     restart: 'unless-stopped'
@@ -35,3 +35,19 @@ services:
       SPANNER_EMULATOR_HOST: localhost:9010
     volumes:
       - ${PWD}/deployments/migrations/spanner:/migrations
+  postgresql-migrate:
+    image: migrate/migrate:v4.15.1
+    user: ${CURRENT_UID}
+    volumes:
+      - ${PWD}/deployments/migrations/postgresql:/migrations
+  postgresql:
+    image: 'postgres:15-alpine'
+    hostname: 'postgresql'
+    container_name: postgresql
+    restart: 'always'
+    environment:
+      - POSTGRES_USER=phantom
+      - POSTGRES_PASSWORD=phantom
+      - POSTGRES_DB=phantom
+    ports:
+      - 5432:5432
